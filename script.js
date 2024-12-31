@@ -520,3 +520,9 @@ const bill = 275
 const tip = bill >= 50 && bill <= 300 ? 0.15 : 0.20
 const total = bill + (bill * tip)
 console.log(total);
+
+
+
+// ========================coding Challenges Part-2 =====================================//
+
+
