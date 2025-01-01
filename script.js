@@ -325,7 +325,7 @@ console.log(myCountry.population);
 // isIsland will be true if there are no neighbouring countries, and false if there
 // are. Use the ternary operator to set the property.
 
-myCountry.describe = function() {
+myCountry.describe = function () {
   console.log(`${this.country} has ${this.population} million ${this["language"]}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`);
 };
 myCountry.describe();
@@ -778,55 +778,50 @@ for (let i = 0; i < game.scored.length; i++) {
   console.log(`Goal ${i + 1}: ${game.scored[i]}`);
 }
 
+let sum = 0;
 
-let sum=0
-
-for(let x in game.odds){
-  sum+=game.odds.x
-  
+for (let x in game.odds) {
+  sum += game.odds.x;
 }
 
-const avg=Object.keys(game.odds).length/sum
+const avg = Object.keys(game.odds).length / sum;
 console.log(avg);
-
 
 console.log(`Odd of victory ${game.team1}: ${team1}`);
 console.log(`Odd of draw: ${draw}`);
 
 console.log(`Odd of victory ${game.team2}: ${team2}`);
 
-
-// Coding Challenge #12   
-// Write a program that receives a list of variable names written in underscore_case and 
-// convert them to camelCase.  
-// The input will come from a textarea inserted into the DOM (see code below to insert the 
-// elements), and conversion will happen when the button is pressed.  
-// Test data:  
-// • underscore_case 
-// • first_name  
-// • Some_Variable 
-// • calculate_AGE  
-// • delayed_departure w 
-// Should produce this output:  
-// • underscoreCase  
-// • firstName  
-// • someVariable  
-// • calculateAge  
-// • delayedDeparture  
-// Hints:  
-// • The solution only needs to work for a variable made out of 2 words, like a_b  
-// • This challenge is difficult on purpose. 
-// • Explore different String methods. 
+// Coding Challenge #12
+// Write a program that receives a list of variable names written in underscore_case and
+// convert them to camelCase.
+// The input will come from a textarea inserted into the DOM (see code below to insert the
+// elements), and conversion will happen when the button is pressed.
+// Test data:
+// • underscore_case
+// • first_name
+// • Some_Variable
+// • calculate_AGE
+// • delayed_departure w
+// Should produce this output:
+// • underscoreCase
+// • firstName
+// • someVariable
+// • calculateAge
+// • delayedDeparture
+// Hints:
+// • The solution only needs to work for a variable made out of 2 words, like a_b
+// • This challenge is difficult on purpose.
+// • Explore different String methods.
 // Afterwards, test with your own test data!
 
-const Cnverter=()=>{
-
-}
-
-
-
-
-
-
-
-
+const Converter = (value) => {
+  const splittedValues = value.split("_");
+    if (splittedValues.length > 1) {
+    const values = splittedValues[0] + (splittedValues[1].charAt(0).toUpperCase() + splittedValues[1].slice(1));
+    console.log(values);
+  } else {
+    console.log(value);
+  }
+};
+Converter("underscorecase");
