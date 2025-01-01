@@ -325,7 +325,7 @@ console.log(myCountry.population);
 // isIsland will be true if there are no neighbouring countries, and false if there
 // are. Use the ternary operator to set the property.
 
-myCountry.describe = function () {
+myCountry.describe = function() {
   console.log(`${this.country} has ${this.population} million ${this["language"]}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`);
 };
 myCountry.describe();
@@ -397,132 +397,436 @@ while (i < populations.length) {
 }
 console.log(percentages3);
 
-
-
-
 // =======================================================Coding Challenged Part-1 ==========================================================//
 
-
-
-// Coding Challenge #1    
-// Mark and John are trying to compare their BMI (Body Mass Index), which is calculated 
-// using the formula: BMI = mass / (height * height) (mass in kg and height in 
-// meters). 
-// Your task is to write some code to help them: 
-// 1. Store Mark's and John's mass and height in variables 
-// called massMark, heightMark, massJohn and heightJohn. 
-// 2. Calculate both their BMIs using the formula, and store the results in two 
-// variables called BMIMark and BMIJohn. 
-// 3. Log the value of BMIMark and BMIJohn to the console. 
-// 4. BONUS: Create a Boolean variable markHigherBMI containing information about 
-// whether Mark has a higher BMI than John. Log it to the console too 
-// Test data:  
-// • Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.  
-// • Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall. 
+// Coding Challenge #1
+// Mark and John are trying to compare their BMI (Body Mass Index), which is calculated
+// using the formula: BMI = mass / (height * height) (mass in kg and height in
+// meters).
+// Your task is to write some code to help them:
+// 1. Store Mark's and John's mass and height in variables
+// called massMark, heightMark, massJohn and heightJohn.
+// 2. Calculate both their BMIs using the formula, and store the results in two
+// variables called BMIMark and BMIJohn.
+// 3. Log the value of BMIMark and BMIJohn to the console.
+// 4. BONUS: Create a Boolean variable markHigherBMI containing information about
+// whether Mark has a higher BMI than John. Log it to the console too
+// Test data:
+// • Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+// • Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
 const heightJohn = 1.95;
 
-const BMIMark=massMark/(heightMark*heightMark)
-const BMIJohn=massJohn/(heightJohn*heightJohn)
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
 
 console.log(BMIMark);
 console.log(BMIJohn);
 
-
-// Coding Challenge #2   
-// Use the BMI example from Challenge #1, and the code you already wrote, and 
-// improve it: 
-// 1. Print a nice output to the console, telling the user who has the higher BMI. The 
-// message can be either: 
-// "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!". 
-// 2. Modify the outputs above to use template literals to include the BMI values in the 
-// outputs. 
-// Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI 
-// (29.1) is higher than Mark's (27)!". 
+// Coding Challenge #2
+// Use the BMI example from Challenge #1, and the code you already wrote, and
+// improve it:
+// 1. Print a nice output to the console, telling the user who has the higher BMI. The
+// message can be either:
+// "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!".
+// 2. Modify the outputs above to use template literals to include the BMI values in the
+// outputs.
+// Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI
+// (29.1) is higher than Mark's (27)!".
 // Note: Don't round the BMI values. Leave them as they are.
 
-console.log(BMIMark>BMIJohn?"Mark's BMI is higher than John's!":"John's BMI is higher than Mark's!");
-console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn}`)
+console.log(BMIMark > BMIJohn ? "Mark's BMI is higher than John's!" : "John's BMI is higher than Mark's!");
+console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn}`);
 
-// Coding Challenge #3   
-// There are two gymnastics teams: Dolphins and Koalas. They compete against each 
-// other 3 times. The winner with the highest average score wins a trophy! 
-// Your tasks: 
-// 1. Calculate the average score for each team, using the test data included below. 
-// The average score for Dolphins should be assigned to the scoreDolphins variable, 
-// and the average score of Koalas should be assigned to the scoreKoalas variable. 
-// 2. Compare the team's average scores to determine the winner of the competition, 
-// and print to the console: 
-// "Dolphins win the trophy" if Dolphins win, or 
-// "Koalas win the trophy" if Koalas win, or 
-// "Both win the trophy" if their average scores are equal. 
-// Test data:  
-// • Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110  
-// • Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123  
-// • Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106 
-
-
+// Coding Challenge #3
+// There are two gymnastics teams: Dolphins and Koalas. They compete against each
+// other 3 times. The winner with the highest average score wins a trophy!
+// Your tasks:
+// 1. Calculate the average score for each team, using the test data included below.
+// The average score for Dolphins should be assigned to the scoreDolphins variable,
+// and the average score of Koalas should be assigned to the scoreKoalas variable.
+// 2. Compare the team's average scores to determine the winner of the competition,
+// and print to the console:
+// "Dolphins win the trophy" if Dolphins win, or
+// "Koalas win the trophy" if Koalas win, or
+// "Both win the trophy" if their average scores are equal.
+// Test data:
+// • Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+// • Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+// • Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 let scoreDolphins = (96 + 108 + 89) / 3;
 let scoreKoalas = (88 + 91 + 110) / 3;
 if (scoreDolphins > scoreKoalas) {
-    console.log("Dolphins win the trophy");
+  console.log("Dolphins win the trophy");
 } else if (scoreKoalas > scoreDolphins) {
-    console.log("Koalas win the trophy");
+  console.log("Koalas win the trophy");
 } else {
-    console.log("Both win the trophy");
+  console.log("Both win the trophy");
 }
-
 
 scoreDolphins = (97 + 112 + 101) / 3;
 scoreKoalas = (109 + 95 + 123) / 3;
 if (scoreDolphins > scoreKoalas) {
-    console.log("Dolphins win the trophy");
+  console.log("Dolphins win the trophy");
 } else if (scoreKoalas > scoreDolphins) {
-    console.log("Koalas win the trophy");
+  console.log("Koalas win the trophy");
 } else {
-    console.log("Both win the trophy");
+  console.log("Both win the trophy");
 }
-
 
 scoreDolphins = (97 + 112 + 101) / 3;
 scoreKoalas = (109 + 95 + 106) / 3;
 if (scoreDolphins > scoreKoalas) {
-    console.log("Dolphins win the trophy");
+  console.log("Dolphins win the trophy");
 } else if (scoreKoalas > scoreDolphins) {
-    console.log("Koalas win the trophy");
+  console.log("Koalas win the trophy");
 } else {
-    console.log("Both win the trophy");
+  console.log("Both win the trophy");
+}
+
+// Coding Challenge #4
+// Steven needs a very simple tip calculator for whenever he goes to eat in a restaurant.
+// In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value
+// is different, the tip is 20%.
+// Your tasks:
+// 1. Calculate the tip, depending on the bill value. Create a variable called tip for
+// this. It's not allowed to use an if...else statement (if it's easier for you, you can
+// start with an if...else statement, and then try to convert it to a ternary
+// operator).
+// 2. Print a string to the console containing the bill value, the tip, and the final
+// value (bill + tip).
+// Example: The bill was 275, the tip was 41.25, and the total value 316.25.
+// Note: Use the values of the bill and tip variables to construct this string. Don't
+// hard-code them
+// TEST DATA: Test with different bill values: 275, 40, and 430
+
+const bill = 275;
+const tip = bill >= 50 && bill <= 300 ? 0.15 : 0.2;
+const total = bill + bill * tip;
+console.log(total);
+
+// ========================coding Challenges Part-2 =====================================//
+
+// Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new
+// gymnastics discipline, which works differently.
+// Each team competes 3 times, and then the average of the 3 scores is calculated (so
+// one average score per team).
+// A team only wins if it has at least double the average score of the other team.
+// Otherwise, no team wins!
+// Your tasks:
+// 1. Create an arrow function calcAverage to calculate the average of 3 scores.
+// This function should have three parameters and return a single number (the
+// average score).
+// 2. Create two new variables — scoreDolphins and scoreKoalas, and assign the
+// value returned from the calcAverage function to them (you will need to call
+// this function, and pass scores as arguments).
+// 3. Create a function checkWinner that takes the average score of each team as
+// parameters (avgDolphins and avgKoalas), and then logs the winner to the
+// console, together with the victory points, according to the rule above.
+// Example: Koalas win (30 vs. 13) (use avgDolphins and avgKoalas instead of
+// hard-coded values).
+// 4. Use the checkWinner function to determine the winner for both DATA
+// 1 and DATA 2.
+// 5. Ignore draws this time. Instead, log No team wins... to the console if there is
+// no winner.
+// TEST DATA 1: Dolphins scored 44, 23, and 71. Koalas scored 65, 54, and 49.
+// TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27.
+// 3
+// The Comp
+
+const calcAverage = (a, b, c) => {
+  return (a + b + c) / 3;
+};
+
+let scoreDolphin = calcAverage(44, 23, 71);
+console.log(scoreDolphin);
+let scoreKoala = calcAverage(65, 54, 49);
+console.log(scoreKoala);
+scoreDolphin = calcAverage(85, 54, 41);
+console.log(scoreDolphin);
+
+scoreKoala = calcAverage(23, 34, 27);
+console.log(scoreKoala);
+
+const checkWinner = (avgDolphins, avgKoalas) => {
+  return avgDolphins > avgKoalas ? `dolphin win ${avgDolphins} vs ${avgKoalas}` : `kolas win ${avgKoalas} vs ${avgDolphins}`;
+};
+
+console.log(checkWinner(scoreDolphin, scoreKoala));
+
+// Coding Challenge #6
+// Steven wants you to improve his tip calculator, using the same rules as before — tip
+// 15% of the bill if the bill value is between 50 and 300, and if the value is different, the
+// tip is 20%.
+// Your tasks:
+// 1. Write a function calcTip that takes any bill value as an input and returns the
+// corresponding tip, calculated based on the rules above (you can check out the
+// code from the first tip calculator challenge if you need to). Use the function
+// type you like the most. Test the function using a bill value of 100.
+// 2. And now let's use arrays! So, create an array called bills containing the test
+// data below.
+// 3. Create an array called tips containing the tip value for each bill, calculated
+// from the function you created before.
+// 4. BONUS: Create an array totals containing the total values, so the bill + tip.
+// TEST DATA: 125, 555, and 44.
+// Hint: Remember that an array needs a value in each position, and that value can actually
+// be the returned value of a function! So you can just call a function as array values (so don't
+// store the tip values in separate variables first, but right in the new array) 😉
+// GOOD LUCK 😀
+
+const calcTip = (bill) => {
+  const tip = bill >= 50 && bill <= 300 ? 0.15 : 0.2;
+  return bill * tip;
+};
+console.log(calcTip(100));
+const bills = [125, 555, 44];
+const tips = bills.map((item) => calcTip(item));
+console.log(tips);
+const totals = bills.map((item, index) => item + tips[index]);
+console.log(totals);
+
+// Coding Challenge #7
+// Let's go back to Mark and John comparing their BMIs!
+// This time, let's use objects to implement the calculations! Remember: BMI = mass /
+// (height * height) (mass in kg and height in meters).
+// Your tasks:
+// 1. For each of them, create an object with properties for their full name, mass,
+// and height (Mark Miller and John Smith). Name these objects
+// as mark and john, and their properties exactly as fullName, mass and height.
+// 2. Create a calcBMI method on each object to calculate the BMI (the same
+// method on both objects). Assign the BMI value to a property, and also return it
+// from the method.
+// 3. Log to the console who has the higher BMI, together with the full name and
+// the respective BMI. Example: "John Smith's BMI (28.3) is higher than
+// Mark Miller's (23.9)!".
+// TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m
+// tall.
+// GOOD LUCK 😀
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+};
+
+const John = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+};
+const calcBMI = (mass, height) => {
+  return mass / (height * height);
+};
+let markBMI = calcBMI(mark.mass, mark.height);
+console.log(markBMI);
+
+let jhonBMI = calcBMI(John.mass, John.height);
+console.log(jhonBMI);
+
+console.log((markBMI > jhonBMI && `${mark.fullName}s BMI (${markBMI}) is higher than Mark Miller's (${jhonBMI})!`) || `${John.fullName}s BMI (${jhonBMI}) is higher than Mark Miller's (${markBMI})!`);
+
+// Coding Challenge #8
+// Let's improve Steven's tip calculator even more, this time using loops!
+// Your tasks:
+// 1. Create an array called bills containing all 10 test bill values.
+// 2. Create empty arrays for the tips and the totals (tips and totals)
+// 3. Use the calcTip function we wrote before (included in the starter code) to
+// calculate tips and total values (bill + tip) for every bill value in
+// the bills array. Use a for loop to perform the 10 calculations!
+// TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
+// BONUS:
+// Write a function calcAverage which takes an array called arr as an argument. This
+// function calculates the average of all numbers in the given array. This is
+// a DIFFICULT challenge! Here is how to solve it if you feel like it:
+// 1. First, you will need to add up all values in the array. To do the addition, start by
+// creating a variable sum that starts at 0. Then loop over the array using a for
+// loop. In each iteration, add the current value to the sum variable. This way, by
+// the end of the loop, you have all values added together.
+// 2. To calculate the average, divide the sum you calculated before by the length of
+// the array (because that's the number of elements).
+// 3. Call the function with the totals array.
+// GOOD LUCK 😀
+let billValues = [22, 295, 176, 440, 37, 105, 10, 1100, 12000];
+let tipsArray = [];
+let totalArray = [];
+
+for (let i = 0; i < billValues.length; i++) {
+  tipsArray.push(calcTip(billValues[i]));
+  totalArray.push(tipsArray[i] + billValues[i]);
+}
+console.log(tipsArray);
+console.log(totalArray);
+
+// Coding Challenge #9
+// Given an array of forecasted maximum temperatures, the thermometer displays a
+// string with the given temperatures. Example: [17, 21, 23] will print "... 17ºC in 1 days
+// ... 21ºC in 2 days ... 23ºC in 3 days ..."
+// Your tasks:
+// 1. Create a function 'printForecast' which takes in an array 'arr' and logs a string
+// like the above to the console. Try it with both test datasets.
+// Test data:
+// • Data 1: [17, 21, 23]
+// • Data 2: [12, 5, -5, 0, 4]
+// GOOD LUCK 😀
+
+function printForecast(...arr) {
+  console.log(arr);
+
+  let forecastString = "... ";
+  for (let i = 0; i < arr.length; i++) {
+    forecastString += `${arr[i]}ºC in ${i + 1} days ... `;
+  }
+  console.log(forecastString);
+}
+
+const data1 = [17, 21, 23];
+printForecast(17, 21, 23);
+
+// =======================================Coding Chellenges Part-3=============================================================//
+
+// Coding Challenge #10
+// We are building a football betting App. We get data from a web service about a
+// certain game (The data we get from the web service is below, check the game
+// variable). In this challenge we're going to work with this data.
+const game = {
+  team1: "Bayern Munich",
+  team2: "Borrussia Dortmund",
+  players: [
+    ["Neuer", "Pavard", "Martinez", "Alaba", "Davies", "Kimmich", "Goretzka", "Coman", "Muller", "Gnarby", "Lewandowski"],
+    ["Burki", "Schulz", "Hummels", "Akanji", "Hakimi", "Weigl", "Witsel", "Hazard", "Brandt", "Sancho", "Gotze"],
+  ],
+  score: "4:0",
+  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+  date: "Nov 9th, 2037",
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 1.3,
+  },
+};
+
+// The Complete JavaScript Course
+// Your tasks:
+// 1. Create one player array for each team (variables 'players1' and
+// 'players2'). In the given data -- players array contains 2 arrays in it.First array
+// contains team 1 players and second array contains team 2 players.
+// 2. The first player in any player array is the goalkeeper and the others are field
+// players. For Bayern Munich (team 1) create one variable (gk) with the
+// goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 field
+// players
+// 3. Create an array 'allPlayers' containing all players of both teams (22 players)
+// 4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a
+// new array ('players1Final') containing all the original team1 players plus 'Thiago',
+// 'Coutinho' and 'Perisic'
+// 5. Based on the game.odds object, create one variable for each odd (called
+// 'team1', 'draw' and 'team2')
+// 6. The team with the lower odd is more likely to win. Print to the console which
+// team is more likely to win, without using an if/else statement or the ternary
+// operator.
+// Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'.
+// Then, call the function again with players from game.scored
+// GOOD LUCK 😀
+
+// const players1=game.players[0]
+// const players2=game.players[1]
+
+const [players1, players2] = game.players;
+console.log(players1);
+console.log(players2);
+
+const [gk, ...fieldPlayers] = players1;
+console.log(gk);
+console.log(fieldPlayers);
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
+console.log(players1Final);
+
+const { team1, x: draw, team2 } = game.odds;
+console.log(team1, draw, team2);
+
+console.log((team1 < team2 && "Team one is win") || "Team two is win");
+
+// Coding Challenge #11
+// Let's continue with our football betting app! Keep using the 'game' variable from before.
+// Your tasks:
+// 1. Loop over the game.scored array and print each player name to the console, along
+// with the goal number (Example: "Goal 1: Lewandowski")
+// 2. Use a loop to calculate the average odd and log it to the console (We already
+// studied how to calculate averages; you can go check if you don't remember)
+// 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
+// • Odd of victory Bayern Munich: 1.33
+// • Odd of draw: 3.25
+// • Odd of victory Borrussia Dortmund: 6.5
+// Get the team names directly from the game object, don't hardcode them (except for
+// "draw"). Hint: Note how the odds and the game objects have the same property names.
+// 1. Bonus: Create an object called 'scorers' which contains the names of the players
+// who scored as properties, and the number of goals as the value. In this game, it will
+// look like this:
+// {
+// }
+// Gnarby: 1,
+// Hummels: 1,
+// Lewandowski: 2
+
+for (let i = 0; i < game.scored.length; i++) {
+  console.log(`Goal ${i + 1}: ${game.scored[i]}`);
+}
+
+
+let sum=0
+
+for(let x in game.odds){
+  sum+=game.odds.x
+  
+}
+
+const avg=Object.keys(game.odds).length/sum
+console.log(avg);
+
+
+console.log(`Odd of victory ${game.team1}: ${team1}`);
+console.log(`Odd of draw: ${draw}`);
+
+console.log(`Odd of victory ${game.team2}: ${team2}`);
+
+
+// Coding Challenge #12   
+// Write a program that receives a list of variable names written in underscore_case and 
+// convert them to camelCase.  
+// The input will come from a textarea inserted into the DOM (see code below to insert the 
+// elements), and conversion will happen when the button is pressed.  
+// Test data:  
+// • underscore_case 
+// • first_name  
+// • Some_Variable 
+// • calculate_AGE  
+// • delayed_departure w 
+// Should produce this output:  
+// • underscoreCase  
+// • firstName  
+// • someVariable  
+// • calculateAge  
+// • delayedDeparture  
+// Hints:  
+// • The solution only needs to work for a variable made out of 2 words, like a_b  
+// • This challenge is difficult on purpose. 
+// • Explore different String methods. 
+// Afterwards, test with your own test data!
+
+const Cnverter=()=>{
+
 }
 
 
 
-// Coding Challenge #4   
-// Steven needs a very simple tip calculator for whenever he goes to eat in a restaurant. 
-// In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value 
-// is different, the tip is 20%. 
-// Your tasks: 
-// 1. Calculate the tip, depending on the bill value. Create a variable called tip for 
-// this. It's not allowed to use an if...else statement (if it's easier for you, you can 
-// start with an if...else statement, and then try to convert it to a ternary 
-// operator). 
-// 2. Print a string to the console containing the bill value, the tip, and the final 
-// value (bill + tip). 
-// Example: The bill was 275, the tip was 41.25, and the total value 316.25. 
-// Note: Use the values of the bill and tip variables to construct this string. Don't 
-// hard-code them       
-// TEST DATA: Test with different bill values: 275, 40, and 430 
-
-const bill = 275
-const tip = bill >= 50 && bill <= 300 ? 0.15 : 0.20
-const total = bill + (bill * tip)
-console.log(total);
 
 
 
-// ========================coding Challenges Part-2 =====================================//
 
 
